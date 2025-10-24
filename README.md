@@ -53,3 +53,21 @@ In k8s version 1.19+, we can specify the –replicas option to create a deployme
 
 
 kubectl create deployment --image=nginx nginx --replicas=4 --dry-run=client -o yaml > nginx-deployment.yaml
+
+Key Nodes:
+
+
+Case1:   Node Affinity     
+
+
+To find which nodes can the pods for the blue deployment be placed on?
+
+
+Check if controlplane and node01 have any taints on them that will prevent the pods to be scheduled on them. If there are no taints, the pods can be scheduled on either node.
+
+So run the following command to check the taints on both nodes.
+
+kubectl describe node controlplane | grep -i taints
+
+kubectl describe node node01 | grep -i taints
+
