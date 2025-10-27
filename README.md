@@ -192,6 +192,32 @@ Kubernetes supports self-healing applications through ReplicaSets and Replicatio
 
 Kubernetes provides additional support to check the health of applications running within PODs and take necessary actions through Liveness and Readiness Probes.
 
+Case6: Autoscaling:
+
+Kubernetes is designed to dynamically scale containerized applications. Two primary scaling strategies in Kubernetes are:
+
+Scaling workloads – adding or removing containers (Pods) in the cluster.
+
+Scaling the underlying cluster infrastructure – adding or removing nodes (servers) in the cluster.
+
+To clarify:
+
+
+For the cluster infrastructure:
+
+
+Horizontal scaling: Add more nodes to the cluster.
+
+Vertical scaling: Increase resources (CPU, memory) on existing nodes.
+
+For workloads:
+
+Horizontal scaling: Create more Pods.
+
+Vertical scaling: Increase resource limits and requests for existing Pods.
+
+There are two approaches to scaling in Kubernetes: manual and automated.
+
 
 
 
