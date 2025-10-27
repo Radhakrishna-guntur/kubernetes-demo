@@ -80,7 +80,78 @@ Edit Deployments:
 With Deployments, you can easily edit any field/property of the POD template. Since the pod template is a child of the deployment specification, with every change the deployment will automatically delete and create a new pod with the new changes. So if you are asked to edit a property of a POD part of a deployment you may do that simply by running the command
 
 
-kubectl edit deployment my-deployment
+kubectl edit deployment my-deployment.
+
+
+Case:3 
+
+Kubernetes Components:
+
+
+An overview of the key components that make up a Kubernetes cluster.
+
+This page provides a high-level overview of the essential components that make up a Kubernetes cluster.
+
+
+Components of Kubernetes:
+
+The components of a Kubernetes cluster
+
+
+Core Components:
+
+A Kubernetes cluster consists of a control plane and one or more worker nodes. Here's a brief overview of the main components:
+
+Control Plane Components:
+
+Manage the overall state of the cluster:
+
+kube-apiserver:
+
+The core component server that exposes the Kubernetes HTTP API.
+
+etcd:
+
+Consistent and highly-available key value store for all API server data.
+
+
+kube-scheduler:
+
+
+Looks for Pods not yet bound to a node, and assigns each Pod to a suitable node.
+kube-controller-manager:
+
+
+Runs controllers to implement Kubernetes API behavior.
+cloud-controller-manager (optional)
+
+
+Integrates with underlying cloud provider(s).
+
+
+Node Components:
+
+
+Run on every node, maintaining running pods and providing the Kubernetes runtime environment:
+
+kubelet:
+
+Ensures that Pods are running, including their containers.
+
+
+kube-proxy (optional)
+
+
+Maintains network rules on nodes to implement Services.
+
+
+Container runtime:
+
+
+Software responsible for running containers. Read Container Runtimes to learn more.
+
+
+
 
 
 
