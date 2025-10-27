@@ -216,7 +216,29 @@ Horizontal scaling: Create more Pods.
 
 Vertical scaling: Increase resource limits and requests for existing Pods.
 
+
 There are two approaches to scaling in Kubernetes: manual and automated.
+
+Manual vs. Automated Scaling
+
+Manual scaling and automated scaling both have their place. Manual scaling involves direct intervention and command execution, while automated scaling leverages Kubernetes controllers for dynamic adjustments.
+
+Automated Scaling
+Automated scaling in Kubernetes simplifies operations:
+
+
+Cluster Infrastructure:
+Managed by the Kubernetes Cluster Autoscaler.
+
+
+Workload Horizontal Scaling:
+Managed by the Horizontal Pod Autoscaler (HPA).
+
+
+Workload Vertical Scaling:
+Managed by the Vertical Pod Autoscaler (VPA).
+
+
 
 
 
