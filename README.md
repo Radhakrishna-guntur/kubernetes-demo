@@ -238,8 +238,28 @@ Managed by the Horizontal Pod Autoscaler (HPA).
 Workload Vertical Scaling:
 Managed by the Vertical Pod Autoscaler (VPA).
 
+Case6: Cluster Upgrade Process Overview
 
 
+Consider a production cluster with master and worker nodes running version 1.10. The upgrade process generally involves two major steps:
+
+Upgrading the master nodes.
+
+Upgrading the worker nodes.
+
+During the master node upgrade, control plane components (such as the API server, scheduler, and controller managers) experience a brief interruption. Although management functionality (like kubectl commands or scaling deployments) is paused, the worker nodes continue to run and deliver applications. However, keep in mind that if any pods fail during this period, they might not be restarted automatically. Once the master upgrade is complete, normal control plane operations resume.
+
+
+After the master nodes are upgraded (for example, moving from version 1.10 to 1.11 while the worker nodes are still at 1.10), the next step is to upgrade the worker nodes. There are several strategies for this:
+
+
+Upgrade all worker nodes simultaneously (which may result in downtime).
+
+
+Upgrade one worker node at a time, allowing workloads to be shifted and ensuring continuous service.
+
+
+Add new nodes with the updated software version, migrate workloads to these new nodes, and then decommission the older nodes.
 
 
 
