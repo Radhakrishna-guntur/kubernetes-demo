@@ -258,8 +258,28 @@ Upgrade all worker nodes simultaneously (which may result in downtime).
 
 Upgrade one worker node at a time, allowing workloads to be shifted and ensuring continuous service.
 
-
 Add new nodes with the updated software version, migrate workloads to these new nodes, and then decommission the older nodes.
+
+
+Case07: CRDs - Custom Resource Definitions
+
+CRDs allow you to define your own custom resources, extending the Kubernetes API to fit your specific needs.
+
+Why Use CRDs?
+
+CRDs are incredibly powerful because they enable you to represent and manage application-specific resources in a Kubernetes-native way. Here are some reasons why you might want to use CRDs:
+
+Abstraction: CRDs allow you to abstract away complex logic into custom resources, making it easier to manage and interact with your applications.
+
+
+Consistency: By defining custom resources, you ensure that your applications are consistently managed across different environments.
+
+
+Automation: CRDs enable automation by allowing you to define custom controllers that can watch and reconcile the state of custom resources.
+
+
+
+
 
 
 
