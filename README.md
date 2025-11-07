@@ -279,7 +279,7 @@ By defining custom resources, you ensure that your applications are consistently
 CRDs enable automation by allowing you to define custom controllers that can watch and reconcile the state of custom resources.
 
 
-**Enter Kustomize**
+**About Kustomize**
 
 Kustomize provides a scalable solution to avoid excessive duplication. Instead of maintaining separate configurations for each environment, you can create a single Base configuration and apply environment-specific Overlays for adjustments.
 
