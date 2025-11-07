@@ -184,7 +184,7 @@ Read about the protections and risks of using secrets here.
 Having said that, there are other better ways of handling sensitive data like passwords in Kubernetes, such as using tools like Helm Secrets, and HashiCorp Vault.
 
 
-Case5:  Self-Healing Applications
+**Case5:  Self-Healing Applications**
 
 
 Kubernetes supports self-healing applications through ReplicaSets and Replication Controllers. The replication controller helps ensure that a POD is re-created automatically when the application within the POD crashes. It helps in ensuring enough replicas of the application are running at all times.
@@ -192,7 +192,7 @@ Kubernetes supports self-healing applications through ReplicaSets and Replicatio
 
 Kubernetes provides additional support to check the health of applications running within PODs and take necessary actions through Liveness and Readiness Probes.
 
-Case6: Autoscaling:
+**Case6: Autoscaling:**
 
 Kubernetes is designed to dynamically scale containerized applications. Two primary scaling strategies in Kubernetes are:
 
@@ -203,23 +203,23 @@ Scaling the underlying cluster infrastructure – adding or removing nodes (serv
 To clarify:
 
 
-For the cluster infrastructure:
-
+**For the cluster infrastructure:
+**
 
 Horizontal scaling: Add more nodes to the cluster.
 
 Vertical scaling: Increase resources (CPU, memory) on existing nodes.
 
-For workloads:
+**For workloads:**
 
-Horizontal scaling: Create more Pods.
+**Horizontal scaling:** Create more Pods.
 
-Vertical scaling: Increase resource limits and requests for existing Pods.
+**Vertical scaling:** Increase resource limits and requests for existing Pods.
 
 
 There are two approaches to scaling in Kubernetes: manual and automated.
 
-Manual vs. Automated Scaling
+**Manual vs. Automated Scaling**
 
 Manual scaling and automated scaling both have their place. Manual scaling involves direct intervention and command execution, while automated scaling leverages Kubernetes controllers for dynamic adjustments.
 
@@ -227,26 +227,24 @@ Automated Scaling
 Automated scaling in Kubernetes simplifies operations:
 
 
-Cluster Infrastructure:
+**Cluster Infrastructure:**
 Managed by the Kubernetes Cluster Autoscaler.
 
 
-Workload Horizontal Scaling:
+**Workload Horizontal Scaling:**
 Managed by the Horizontal Pod Autoscaler (HPA).
 
 
-Workload Vertical Scaling:
+**Workload Vertical Scaling:**
 Managed by the Vertical Pod Autoscaler (VPA).
 
-Case6: Cluster Upgrade Process Overview
+**Case6: Cluster Upgrade Process Overview**
 
 
 Consider a production cluster with master and worker nodes running version 1.10. The upgrade process generally involves two major steps:
 
-Upgrading the master nodes.
-
-Upgrading the worker nodes.
-
+**Upgrading the worker nodes.
+**
 During the master node upgrade, control plane components (such as the API server, scheduler, and controller managers) experience a brief interruption. Although management functionality (like kubectl commands or scaling deployments) is paused, the worker nodes continue to run and deliver applications. However, keep in mind that if any pods fail during this period, they might not be restarted automatically. Once the master upgrade is complete, normal control plane operations resume.
 
 
@@ -261,23 +259,31 @@ Upgrade one worker node at a time, allowing workloads to be shifted and ensuring
 Add new nodes with the updated software version, migrate workloads to these new nodes, and then decommission the older nodes.
 
 
-Case07: CRDs - Custom Resource Definitions
+**Case07: CRDs - Custom Resource Definitions**
 
 CRDs allow you to define your own custom resources, extending the Kubernetes API to fit your specific needs.
 
-Why Use CRDs?
+**Why Use CRDs?**
 
 CRDs are incredibly powerful because they enable you to represent and manage application-specific resources in a Kubernetes-native way. Here are some reasons why you might want to use CRDs:
 
-Abstraction: CRDs allow you to abstract away complex logic into custom resources, making it easier to manage and interact with your applications.
+**Abstraction: **
+CRDs allow you to abstract away complex logic into custom resources, making it easier to manage and interact with your applications.
 
 
-Consistency: By defining custom resources, you ensure that your applications are consistently managed across different environments.
+**Consistency: **
+By defining custom resources, you ensure that your applications are consistently managed across different environments.
 
 
-Automation: CRDs enable automation by allowing you to define custom controllers that can watch and reconcile the state of custom resources.
+**Automation:**
+CRDs enable automation by allowing you to define custom controllers that can watch and reconcile the state of custom resources.
 
 
+**Enter Kustomize**
+
+Kustomize provides a scalable solution to avoid excessive duplication. Instead of maintaining separate configurations for each environment, you can create a single Base configuration and apply environment-specific Overlays for adjustments.
+
+Kustomize effectively addresses the challenges of managing configurations across multiple environments by allowing you to maintain a single Base configuration and apply minimal, environment-specific Overlays. This strategy ensures consistency, reduces maintenance overhead, and scales well as your Kubernetes deployments grow.
 
 
 
