@@ -285,6 +285,17 @@ Kustomize provides a scalable solution to avoid excessive duplication. Instead o
 
 Kustomize effectively addresses the challenges of managing configurations across multiple environments by allowing you to maintain a single Base configuration and apply minimal, environment-specific Overlays. This strategy ensures consistency, reduces maintenance overhead, and scales well as your Kubernetes deployments grow.
 
+**Key Takeaways**
+
+Kustomize requires a kustomization.yaml file that lists the resources to manage and the transformations to apply.
+The kustomize build command processes these resource files and outputs the final configuration without deploying it.
+
+
+Additional steps, such as piping the output to kubectl apply, are necessary to deploy the resources to your Kubernetes cluster.
+By understanding and using the kustomization.yaml file properly, you can efficiently manage and transform your Kubernetes resources using Kustomize.
+
+
+
 
 
 
