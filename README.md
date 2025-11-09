@@ -295,6 +295,26 @@ Additional steps, such as piping the output to kubectl apply, are necessary to d
 By understanding and using the kustomization.yaml file properly, you can efficiently manage and transform your Kubernetes resources using Kustomize.
 
 
+## Overlays:
+
+Overlays in Kustomize allow you to customize a base Kubernetes configuration on a per-environment basis. This method is particularly useful for environments such as development, staging, and production, where you need to apply environment-specific adjustments to shared configurations.
+
+<img width="603" height="680" alt="Screenshot 2025-11-09 at 10 30 24 AM" src="https://github.com/user-attachments/assets/6186cfef-2444-4dad-97dd-b56be65c1ed8" />
+
+
+**Kustomize projects are typically organized into two main sections:**
+
+Base Configuration: Contains all shared and default Kubernetes resource definitions.
+Overlay Directories: Each environment (e.g., dev, stg, prod) has its own overlay folder with patches to modify the base configuration as needed.
+
+**Summary**
+**Overlays in Kustomize enable you to:**
+
+Import and reuse a base configuration containing shared resources.
+Apply environment-specific patches to adjust base resources such as replica counts.
+Introduce new resources within an overlay without affecting the base configuration.
+
+This approach helps maintain a clean separation between shared configurations and environment-specific customizations while taking full advantage of Kustomize's powerful features for managing Kubernetes deployments.
 
 
 
