@@ -1,6 +1,19 @@
 # Kubernetes Interview Questions and Answers:
 
 
+<img width="989" height="446" alt="Screenshot 2026-02-05 at 8 54 33 AM" src="https://github.com/user-attachments/assets/6d65bc04-931b-454f-8c52-d448a1b24b8b" />
+
+
+<img width="1015" height="458" alt="Screenshot 2026-02-05 at 9 01 45 AM" src="https://github.com/user-attachments/assets/20949e35-2b50-4daa-87a8-b08718cb544d" />
+
+<img width="1032" height="476" alt="Screenshot 2026-02-05 at 9 02 49 AM" src="https://github.com/user-attachments/assets/5dbaed97-4956-4dea-b7ba-6b5de9d11338" />
+<img width="1005" height="480" alt="Screenshot 2026-02-05 at 9 04 05 AM" src="https://github.com/user-attachments/assets/f9ee7124-67da-484a-9e92-4a460c2c29a2" />
+
+<img width="1038" height="456" alt="Screenshot 2026-02-05 at 9 04 50 AM" src="https://github.com/user-attachments/assets/58bb2c90-f4c1-4f04-a0c8-66f455117f79" />
+
+
+
+
 
 
 
@@ -23,3 +36,4 @@
 <img width="1234" height="710" alt="Screenshot 2026-02-04 at 3 33 43 PM" src="https://github.com/user-attachments/assets/751da85f-0626-4e6e-b8f7-324cf6c6a339" />
 <img width="1237" height="710" alt="Screenshot 2026-02-04 at 3 34 56 PM" src="https://github.com/user-attachments/assets/50b382aa-b41f-4c65-bdc2-d87404c64b56" />
 <img width="1252" height="671" alt="Screenshot 2026-02-04 at 3 50 06 PM" src="https://github.com/user-attachments/assets/c7baf22a-d252-44b0-a7e3-b0dcc2900c3b" />
+
