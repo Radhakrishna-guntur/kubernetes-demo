@@ -1,11 +1,9 @@
 # kubernetes-demo
 RK Kubernetes Practical Demos for Learning 
 
-Best Practices:
+## Best Practices:
 
-
-kubectl run: 
-
+**kubectl run: **
 
 Using the kubectl run command can help in generating a YAML template. And sometimes, you can even get away with just the kubectl run command without having to create a YAML file at all. For example, if you were asked to create a pod or deployment with a specific name and image, you can simply run the kubectl run command.
 
@@ -15,7 +13,7 @@ Reference (Bookmark this page for the exam. It will be very handy):
 
 https://kubernetes.io/docs/reference/kubectl/conventions/
 
-Create an NGINX Pod
+**Create an NGINX Pod**
 
 kubectl run nginx --image=nginx
 
@@ -25,7 +23,7 @@ Generate POD Manifest YAML file (-o yaml). Don’t create it(–dry-run)
 kubectl run nginx --image=nginx --dry-run=client -o yaml
 
 
-Create a deployment
+**Create a deployment**
 
 kubectl create deployment --image=nginx nginx
 
@@ -57,7 +55,7 @@ kubectl create deployment --image=nginx nginx --replicas=4 --dry-run=client -o y
 Key Nodes:
 
 
-Case1:   Node Affinity     
+## Case1:   Node Affinity     
 
 
 To find which nodes can the pods for the blue deployment be placed on?
@@ -72,9 +70,7 @@ kubectl describe node controlplane | grep -i taints
 kubectl describe node node01 | grep -i taints
 
 
-Case02:
-
-Edit Deployments:
+## Case02: Edit Deployments:
 
 
 With Deployments, you can easily edit any field/property of the POD template. Since the pod template is a child of the deployment specification, with every change the deployment will automatically delete and create a new pod with the new changes. So if you are asked to edit a property of a POD part of a deployment you may do that simply by running the command
@@ -83,9 +79,7 @@ With Deployments, you can easily edit any field/property of the POD template. Si
 kubectl edit deployment my-deployment.
 
 
-Case:3 
-
-Kubernetes Components:
+## Case:3 Kubernetes Components:
 
 
 An overview of the key components that make up a Kubernetes cluster.
@@ -98,7 +92,7 @@ Components of Kubernetes:
 The components of a Kubernetes cluster
 
 
-Core Components:
+## Core Components:
 
 A Kubernetes cluster consists of a control plane and one or more worker nodes. Here's a brief overview of the main components:
 
