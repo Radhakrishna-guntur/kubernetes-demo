@@ -1,4 +1,6 @@
+
 #controlplane ~ ➜  kubectl create deployment blue --image=nginx --replicas=3 -o yaml
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
