@@ -1,4 +1,4 @@
-## 𝑼𝒏𝒅𝒆𝒓𝒔𝒕𝒂𝒏𝒅𝒊𝒏𝒈 𝑲𝒖𝒃𝒆𝒓𝒏𝒆𝒕𝒆𝒔 𝑷𝒐𝒅 𝒇𝒂𝒊𝒍𝒖𝒓𝒆𝒔
+# 𝑼𝒏𝒅𝒆𝒓𝒔𝒕𝒂𝒏𝒅𝒊𝒏𝒈 𝑲𝒖𝒃𝒆𝒓𝒏𝒆𝒕𝒆𝒔 𝑷𝒐𝒅 𝒇𝒂𝒊𝒍𝒖𝒓𝒆𝒔
 
 Pods can have startup and runtime errors.
 
@@ -15,6 +15,7 @@ Pods can have startup and runtime errors.
 ✅ RegistryUnavailable 
 
 ✅ InvalidImageName 
+
 
 **Runtime errors include:**
 
@@ -54,10 +55,12 @@ The first two cases can be solved by correcting the image name and tag.
 
 For the last, one should add the credentials to your private registry in a Secret and reference it in the Pods
 
+
 **𝑹𝒖𝒏𝑪𝒐𝒏𝒕𝒂𝒊𝒏𝒆𝒓𝑬𝒓𝒓𝒐𝒓**
 
 ❗
 ✍ The error appears when the container is unable to start before application
+
 
 **Common causes:**
 
