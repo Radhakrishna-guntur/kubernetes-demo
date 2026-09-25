@@ -2,6 +2,7 @@
 
 Pods can have startup and runtime errors.
 
+
 **Startup errors include:**
 
 ✅ ImagePullBackoff 
@@ -19,8 +20,8 @@ Pods can have startup and runtime errors.
 
 **Runtime errors include:**
 
-📌
-✅ CrashLoopBackOff
+
+📌 ✅ CrashLoopBackOff
 
 ✅ RunContainerError
 
@@ -51,6 +52,7 @@ There are three common culprits:
 ✅ You specified a non-existing tag for the image.
 
 ✅ The image that you’re trying to retrieve belongs to a private registry and the cluster doesn’t have credentials to access it.
+
 The first two cases can be solved by correcting the image name and tag.
 
 For the last, one should add the credentials to your private registry in a Secret and reference it in the Pods
